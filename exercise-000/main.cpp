@@ -3,7 +3,7 @@
 
 #include "config.h"
 
-auto main(int argc, char **argv) -> int
+auto main(int argc, char **argv) -> int   
 {
 
     /**
@@ -13,7 +13,10 @@ auto main(int argc, char **argv) -> int
      */
     fmt::print("Hello, {}!\n", tfe24::PROJECT_NAME);
 
-    /* INSERT YOUR CODE HERE */
+    int x = 10;
+    int* p = &x;
+    fmt::print("The memory address of 'x' (stored in p) is: {}\n", fmt::ptr(p));
+    fmt::print("The value at the address is: {}\n", *p);
 
     return 0; /* exit gracefully*/
 }
